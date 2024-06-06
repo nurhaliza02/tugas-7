@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog JavaScript</title>
+        <script>
+          window.onload = function() {
+           alert("Selamat datang di halaman website kami!");
+          };
+         </script>
+
+         <script>
+          function openDialog(dialogId) {
+          var dialog = document.getElementById(dialogId);
+          dialog.style.display = "block";
+          };
+         </script>
+
+         <script>
+          function closeDialog(dialogId) {
+          var dialog = document.getElementById(dialogId);
+          dialog.style.display = "none";
+          };
+         </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <button onclick="openDialog('dialog1')">Isi Form 1</button>
+  <button onclick="openDialog('dialog2')">Isi Form 2</button>
+
+  <div id="dialog1" class="dialog">
+    <div class="dialog-content">
+      <span onclick="closeDialog('dialog1')" class="close">&times;</span>
+      <h2>Form 1</h2>
+      <form>
+        <label for="name1">Nama:</label><br>
+        <input type="text" id="nama1" name="nama1"><br>
+        <label for="email1">Email:</label><br>
+        <input type="email" id="email1" name="email1"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div id="dialog2" class="dialog">
+    <div class="dialog-content">
+      <span onclick="closeDialog('dialog2')" class="close">&times;</span>
+      <h2>Form 2</h2>
+      <form>
+        <label for="name2">Nama:</label><br>
+        <input type="text" id="nama2" name="nama2"><br>
+        <label for="email2">Email:</label><br>
+        <input type="email" id="email2" name="email2"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
